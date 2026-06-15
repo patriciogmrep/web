@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://patriciogarciamoritan.com/sitemap-index.xml

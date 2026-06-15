@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-azul: #093281;
+  --color-azul-claro: #1a4a9e;
+  --color-verde: #8fb939;
+  --color-gris: #6d6e71;
+  --color-gris-claro: #bbbdbe;
+  --color-bg: #fafaf8;
+  --color-bg-article: #ffffff;
+  --color-text: #3a3a3c;
+  --color-text-light: #6d6e71;
+
+  --font-serif: "Libre Baskerville", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  line-height: 1.7;
+}
+
+/* Article body — usado dentro de .prose-article */
+.prose-article p {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--color-text);
+  margin-bottom: 1.6rem;
+}
+
+.prose-article p:first-of-type::first-letter {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  float: left;
+  line-height: 0.8;
+  margin: 0.1em 0.12em 0 0;
+  color: var(--color-azul);
+  font-weight: 700;
+}
+
+.prose-article h2 {
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-azul);
+  margin: 2.5rem 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.prose-article blockquote {
+  border-left: 3px solid var(--color-verde);
+  padding: 1rem 0 1rem 1.5rem;
+  margin: 2rem 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-azul-claro);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.prose-article .highlight {
+  background: linear-gradient(135deg, rgba(9, 50, 129, 0.04), rgba(143, 185, 57, 0.06));
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  border: 1px solid rgba(143, 185, 57, 0.15);
+}
+
+.prose-article .highlight p {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+  margin-bottom: 0;
+}

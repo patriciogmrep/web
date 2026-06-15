@@ -1,0 +1,77 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const publicaciones = (await getCollection("publicaciones", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.fecha.valueOf() - a.data.fecha.valueOf()
+);
+
+const fmt = new Intl.DateTimeFormat("es-AR", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+---
+
+<Base
+  title="Publicaciones — Patricio García Moritán"
+  description="Reflexiones, análisis y artículos sobre derecho administrativo, regulación económica y vida profesional."
+>
+  <section class="pt-24 pb-12 px-6" style="background: var(--color-azul);">
+    <div class="max-w-3xl mx-auto">
+      <p
+        class="text-xs uppercase tracking-[0.15em] font-medium mb-5"
+        style="color: var(--color-verde);"
+      >
+        Reflexiones
+      </p>
+      <h1
+        class="font-serif font-normal text-white leading-[1.3]"
+        style="font-size: clamp(1.8rem, 4vw, 2.6rem);"
+      >
+        Publicaciones
+      </h1>
+    </div>
+  </section>
+
+  <section class="px-6 py-16 max-w-3xl mx-auto">
+    {
+      publicaciones.length === 0 ? (
+        <p style="color: var(--color-text-light);">Pronto habrá contenido nuevo aquí.</p>
+      ) : (
+        <ul class="space-y-10">
+          {publicaciones.map((post) => (
+            <li>
+              <a
+                href={`/publicaciones/${post.id}`}
+                class="block no-underline group"
+              >
+                <p
+                  class="text-[0.7rem] uppercase tracking-[0.12em] mb-2"
+                  style="color: var(--color-verde);"
+                >
+                  {post.data.categoria}
+                </p>
+                <h2
+                  class="font-serif text-2xl leading-snug mb-3 group-hover:underline"
+                  style="color: var(--color-azul);"
+                >
+                  {post.data.titulo}
+                </h2>
+                <p
+                  class="font-serif text-base leading-relaxed mb-3"
+                  style="color: var(--color-text);"
+                >
+                  {post.data.bajada}
+                </p>
+                <p class="text-sm" style="color: var(--color-text-light);">
+                  {fmt.format(post.data.fecha)} · {post.data.lectura}
+                </p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </section>
+</Base>

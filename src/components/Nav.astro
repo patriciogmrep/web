@@ -1,0 +1,39 @@
+---
+const pathname = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+const links = [
+  { href: "/", label: "Inicio" },
+  { href: "/sobre-mi", label: "Sobre mí" },
+  { href: "/publicaciones", label: "Publicaciones" },
+  { href: "/contacto", label: "Contacto" },
+];
+---
+
+<nav
+  class="fixed top-0 left-0 right-0 z-50 h-16 px-6 md:px-8 flex items-center justify-between border-b border-black/5"
+  style="background: rgba(255,255,255,0.95); backdrop-filter: blur(12px);"
+>
+  <a
+    href="/"
+    class="font-sans font-semibold text-sm tracking-tight no-underline"
+    style="color: var(--color-azul); letter-spacing: -0.02em;"
+  >
+    Patricio García Moritán<span style="color: var(--color-verde);">.</span>
+  </a>
+
+  <div class="flex gap-4 md:gap-8">
+    {
+      links.map(({ href, label }) => (
+        <a
+          href={href}
+          class="text-xs md:text-sm font-normal no-underline transition-colors"
+          style={`color: ${isActive(href) ? "var(--color-azul)" : "var(--color-text-light)"};`}
+        >
+          {label}
+        </a>
+      ))
+    }
+  </div>
+</nav>
