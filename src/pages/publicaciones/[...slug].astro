@@ -18,9 +18,40 @@ const fmt = new Intl.DateTimeFormat("es-AR", {
   month: "long",
   year: "numeric",
 });
+
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": `${canonical}#article`,
+  headline: post.data.titulo,
+  description: post.data.bajada,
+  image: new URL("/img/preview.jpg", Astro.site).toString(),
+  datePublished: post.data.fecha.toISOString(),
+  dateModified: post.data.fecha.toISOString(),
+  inLanguage: "es-AR",
+  articleSection: post.data.categoria,
+  author: {
+    "@type": "Person",
+    "@id": "https://patriciogarciamoritan.com/#person",
+    name: "Patricio García Moritán",
+    url: "https://patriciogarciamoritan.com",
+  },
+  publisher: {
+    "@type": "Person",
+    "@id": "https://patriciogarciamoritan.com/#person",
+    name: "Patricio García Moritán",
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": canonical,
+  },
+};
 ---
 
 <Base title={`${post.data.titulo} — Patricio García Moritán`} description={post.data.bajada}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <article>
     <!-- HERO -->
     <section

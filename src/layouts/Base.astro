@@ -21,7 +21,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 ---
 
 <!doctype html>
-<html lang="es" class="bg-[color:var(--color-bg)]">
+<html lang="es-AR" class="bg-[color:var(--color-bg)]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,6 +31,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="es-AR" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={canonical} />
+
+    <meta name="author" content="Patricio García Moritán" />
+    <meta name="geo.region" content="AR-C" />
+    <meta name="geo.placename" content="Buenos Aires" />
+    <meta name="geo.position" content="-34.603722;-58.381592" />
+    <meta name="ICBM" content="-34.603722, -58.381592" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Patricio García Moritán" />
@@ -63,34 +71,104 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
       set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Person",
+        "@id": "https://patriciogarciamoritan.com/#person",
         name: "Patricio García Moritán",
+        givenName: "Patricio",
+        familyName: "García Moritán",
         url: "https://patriciogarciamoritan.com",
         image: "https://patriciogarciamoritan.com/img/patricio.jpg",
-        jobTitle: "Abogado — Socio",
+        description:
+          "Abogado argentino especializado en derecho administrativo y regulación económica. Socio de Cassagne Abogados desde 2015, con más de 25 años de experiencia en industrias reguladas, contrataciones públicas, telecomunicaciones, defensa y seguridad.",
+        jobTitle: "Abogado — Socio en Cassagne Abogados",
+        nationality: {
+          "@type": "Country",
+          name: "Argentina",
+        },
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Buenos Aires",
+          addressRegion: "Ciudad Autónoma de Buenos Aires",
+          addressCountry: "AR",
+        },
+        homeLocation: {
+          "@type": "Place",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Buenos Aires",
+            addressCountry: "AR",
+          },
+        },
+        workLocation: {
+          "@type": "Place",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Buenos Aires",
+            addressCountry: "AR",
+          },
+        },
+        hasOccupation: {
+          "@type": "Occupation",
+          name: "Abogado",
+          description:
+            "Abogado especializado en derecho administrativo, regulación económica e industrias reguladas.",
+          occupationLocation: {
+            "@type": "Country",
+            name: "Argentina",
+          },
+          occupationalCategory: "23-1011.00",
+          skills:
+            "Derecho administrativo, regulación económica, contrataciones públicas, derecho de las telecomunicaciones, arbitraje administrativo, industrias reguladas, defensa y seguridad",
+        },
         worksFor: {
-          "@type": "Organization",
+          "@type": "LegalService",
+          "@id": "https://www.cassagne.com.ar/#organization",
           name: "Cassagne Abogados",
           url: "https://www.cassagne.com.ar",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Buenos Aires",
+            addressCountry: "AR",
+          },
+          areaServed: { "@type": "Country", name: "Argentina" },
         },
+        memberOf: [
+          {
+            "@type": "Organization",
+            name: "Cámara Argentina de Defensa y Seguridad",
+          },
+        ],
         alumniOf: [
           {
             "@type": "CollegeOrUniversity",
             name: "Pontificia Universidad Católica Argentina (UCA)",
+            sameAs: "https://uca.edu.ar/",
           },
           {
             "@type": "CollegeOrUniversity",
             name: "Universidad Torcuato Di Tella (UTDT)",
+            sameAs: "https://www.utdt.edu/",
           },
         ],
         knowsAbout: [
           "Derecho administrativo",
+          "Derecho regulatorio",
           "Regulación económica",
           "Derecho de las telecomunicaciones",
           "Contrataciones públicas",
+          "Industrias reguladas",
+          "Arbitraje administrativo",
+          "Industria de defensa y seguridad",
+          "Derecho y economía",
+        ],
+        knowsLanguage: [
+          { "@type": "Language", name: "Español", alternateName: "es" },
+          { "@type": "Language", name: "Inglés", alternateName: "en" },
+          { "@type": "Language", name: "Francés", alternateName: "fr" },
         ],
         sameAs: [
           "https://www.linkedin.com/in/patriciogarciamoritan",
           "https://www.cassagne.com.ar/patricio-garcia-moritan/",
+          "https://abogados.com.ar/directorio/socio/patricio-garcia-moritan/1158",
         ],
       })}
     />
