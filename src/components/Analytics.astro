@@ -1,11 +1,13 @@
 ---
 const GA_ID = "G-2D7C89MEQ3";
+const AHREFS_KEY = "Oi25ryMJNoJnWVZcLmXMOw";
 const isProd = import.meta.env.PROD;
 ---
 
 {
   isProd && (
     <>
+      {/* Google Analytics 4 */}
       <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
       <script is:inline define:vars={{ GA_ID }}>
         window.dataLayer = window.dataLayer || [];
@@ -15,6 +17,9 @@ const isProd = import.meta.env.PROD;
         gtag("js", new Date());
         gtag("config", GA_ID, { anonymize_ip: true });
       </script>
+
+      {/* Ahrefs Web Analytics */}
+      <script src="https://analytics.ahrefs.com/analytics.js" data-key={AHREFS_KEY} async />
     </>
   )
 }
