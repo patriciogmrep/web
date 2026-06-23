@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import Analytics from "../components/Analytics.astro";
 
 interface Props {
   title: string;
@@ -172,6 +173,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
         ],
       })}
     />
+
+    <Analytics />
   </head>
   <body class="min-h-screen flex flex-col">
     <Nav />
