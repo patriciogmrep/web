@@ -66,12 +66,15 @@ const publicaciones = (await getCollection("publicaciones"))
           style="border: 6px solid rgba(255,255,255,0.08); box-shadow: 0 20px 60px rgba(0,0,0,0.25);"
         >
           <img
-            src="/img/patricio.jpg"
+            src="/img/patricio-hero.jpg"
             alt="Patricio García Moritán"
             class="w-full h-full object-cover"
             style="object-position: center 22%;"
             width="288"
             height="288"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
           />
         </div>
       </div>
