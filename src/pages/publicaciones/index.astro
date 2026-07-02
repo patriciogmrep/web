@@ -23,14 +23,17 @@ const fmt = new Intl.DateTimeFormat("es-AR", {
         class="text-xs uppercase tracking-[0.15em] font-medium mb-5"
         style="color: var(--color-verde);"
       >
-        Reflexiones
+        Análisis y publicaciones
       </p>
       <h1
         class="font-serif font-normal text-white leading-[1.3]"
         style="font-size: clamp(1.8rem, 4vw, 2.6rem);"
       >
-        Publicaciones
+        Análisis y publicaciones
       </h1>
+      <p class="mt-4 text-sm" style="color: rgba(255,255,255,0.7);">
+        Notas firmadas sobre industria, regulación y derecho administrativo.
+      </p>
     </div>
   </section>
 
@@ -66,6 +69,9 @@ const fmt = new Intl.DateTimeFormat("es-AR", {
                 </p>
                 <p class="text-sm" style="color: var(--color-text-light);">
                   {fmt.format(post.data.fecha)} · {post.data.lectura}
+                  {post.data.medio && (
+                    <> · Fuente: <strong>{post.data.medio}</strong></>
+                  )}
                 </p>
               </a>
             </li>

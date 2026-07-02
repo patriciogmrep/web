@@ -77,17 +77,24 @@ const articleSchema = {
           {post.data.titulo}
         </h1>
         <div class="flex flex-wrap items-center gap-3 text-sm" style="color: rgba(255,255,255,0.7);">
-          <span style="color: rgba(255,255,255,0.9); font-weight: 500;"
-            >Patricio García Moritán</span
-          >
-          <span
-            class="inline-block w-[3px] h-[3px] rounded-full"
-            style="background: rgba(255,255,255,0.3);"></span>
           <span>{fmt.format(post.data.fecha)}</span>
           <span
             class="inline-block w-[3px] h-[3px] rounded-full"
             style="background: rgba(255,255,255,0.3);"></span>
           <span>{post.data.lectura} de lectura</span>
+          {
+            post.data.medio && (
+              <>
+                <span
+                  class="inline-block w-[3px] h-[3px] rounded-full"
+                  style="background: rgba(255,255,255,0.3);"
+                />
+                <span style="color: rgba(255,255,255,0.9);">
+                  Fuente: <strong>{post.data.medio}</strong>
+                </span>
+              </>
+            )
+          }
         </div>
       </div>
     </section>
@@ -97,6 +104,35 @@ const articleSchema = {
       <div class="prose-article">
         <Content />
       </div>
+
+      {
+        post.data.medio && post.data.medioUrl && (
+          <div
+            class="mt-12 p-6 rounded-lg"
+            style="background: var(--color-bg); border-left: 3px solid var(--color-verde);"
+          >
+            <p class="text-xs uppercase tracking-[0.12em] mb-2" style="color: var(--color-verde); font-weight: 500;">
+              Fuente original
+            </p>
+            <p class="text-sm leading-relaxed" style="color: var(--color-text);">
+              Publicado originalmente en <strong>{post.data.medio}</strong>
+              {post.data.medioFecha && (
+                <>, el {fmt.format(post.data.medioFecha)}</>
+              )}
+              .
+            </p>
+            <a
+              href={post.data.medioUrl}
+              target="_blank"
+              rel="noopener"
+              class="inline-block mt-3 text-sm no-underline font-medium"
+              style="color: var(--color-azul);"
+            >
+              → Leer el artículo completo en {post.data.medio}
+            </a>
+          </div>
+        )
+      }
 
       <!-- Author box -->
       <div
@@ -120,10 +156,10 @@ const articleSchema = {
             Patricio García Moritán
           </h3>
           <p class="text-sm leading-relaxed" style="color: var(--color-text-light);">
-            Abogado especializado en derecho administrativo y regulación
-            económica. Socio de Cassagne Abogados. Magíster en Derecho y
-            Economía (UTDT). Más de 25 años asesorando empresas nacionales e
-            internacionales en sectores regulados.
+            Empresario y abogado argentino. Director de Bersa S.A. y Presidente
+            de Byrna Latam. Socio de Cassagne Abogados. Magíster en Derecho y
+            Economía (UTDT). Más de 25 años de experiencia en derecho
+            administrativo y regulación económica.
           </p>
         </div>
       </div>

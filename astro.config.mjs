@@ -5,6 +5,10 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://patriciogarciamoritan.com',
+  redirects: {
+    '/sobre-mi': '/trayectoria',
+    '/sobre-mi/': '/trayectoria/',
+  },
   integrations: [mdx(), sitemap()],
   vite: {
     plugins: [tailwindcss()],

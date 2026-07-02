@@ -12,7 +12,7 @@ interface Props {
 
 const {
   title,
-  description = "Patricio García Moritán — Abogado especializado en derecho administrativo y regulación económica. Socio de Cassagne Abogados.",
+  description = "Patricio García Moritán es empresario y abogado. Director de Bersa S.A. y Presidente de Byrna Latam. Más de 25 años de experiencia en derecho administrativo y regulación económica. Socio de Cassagne Abogados.",
   ogImage = "/img/preview.jpg",
 } = Astro.props;
 
@@ -79,8 +79,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
         url: "https://patriciogarciamoritan.com",
         image: "https://patriciogarciamoritan.com/img/patricio.jpg",
         description:
-          "Abogado argentino especializado en derecho administrativo y regulación económica. Socio de Cassagne Abogados desde 2015, con más de 25 años de experiencia en industrias reguladas, contrataciones públicas, telecomunicaciones, defensa y seguridad.",
-        jobTitle: "Abogado — Socio en Cassagne Abogados",
+          "Empresario y abogado argentino. Director de Bersa S.A. y Presidente de Byrna Latam, la operación regional de Byrna Technologies especializada en soluciones de defensa personal no letal. Socio de Cassagne Abogados desde 2015, con más de 25 años de experiencia en derecho administrativo y regulación económica.",
+        jobTitle: "Empresario y abogado — Presidente de Byrna Latam, Director de Bersa S.A., Socio en Cassagne Abogados",
         nationality: {
           "@type": "Country",
           name: "Argentina",
@@ -107,31 +107,68 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
             addressCountry: "AR",
           },
         },
-        hasOccupation: {
-          "@type": "Occupation",
-          name: "Abogado",
-          description:
-            "Abogado especializado en derecho administrativo, regulación económica e industrias reguladas.",
-          occupationLocation: {
-            "@type": "Country",
-            name: "Argentina",
+        hasOccupation: [
+          {
+            "@type": "Occupation",
+            name: "Empresario",
+            description:
+              "Conducción de proyectos industriales en Argentina y expansión regional en industria de defensa personal no letal.",
+            occupationLocation: {
+              "@type": "Country",
+              name: "Argentina",
+            },
+            occupationalCategory: "11-1011.00",
           },
-          occupationalCategory: "23-1011.00",
-          skills:
-            "Derecho administrativo, regulación económica, contrataciones públicas, derecho de las telecomunicaciones, arbitraje administrativo, industrias reguladas, defensa y seguridad",
-        },
-        worksFor: {
-          "@type": "LegalService",
-          "@id": "https://www.cassagne.com.ar/#organization",
-          name: "Cassagne Abogados",
-          url: "https://www.cassagne.com.ar",
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: "Buenos Aires",
-            addressCountry: "AR",
+          {
+            "@type": "Occupation",
+            name: "Abogado",
+            description:
+              "Abogado especializado en derecho administrativo, regulación económica e industrias reguladas.",
+            occupationLocation: {
+              "@type": "Country",
+              name: "Argentina",
+            },
+            occupationalCategory: "23-1011.00",
+            skills:
+              "Derecho administrativo, regulación económica, contrataciones públicas, derecho de las telecomunicaciones, arbitraje administrativo, industrias reguladas",
           },
-          areaServed: { "@type": "Country", name: "Argentina" },
-        },
+        ],
+        worksFor: [
+          {
+            "@type": "Organization",
+            name: "Byrna Latam",
+            description:
+              "Operación regional de Byrna Technologies para América Latina — soluciones de defensa personal no letal.",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Buenos Aires",
+              addressCountry: "AR",
+            },
+          },
+          {
+            "@type": "Organization",
+            name: "Bersa S.A.",
+            description:
+              "Histórica empresa industrial argentina relanzada bajo una nueva etapa de gestión.",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Buenos Aires",
+              addressCountry: "AR",
+            },
+          },
+          {
+            "@type": "LegalService",
+            "@id": "https://www.cassagne.com.ar/#organization",
+            name: "Cassagne Abogados",
+            url: "https://www.cassagne.com.ar",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Buenos Aires",
+              addressCountry: "AR",
+            },
+            areaServed: { "@type": "Country", name: "Argentina" },
+          },
+        ],
         memberOf: [
           {
             "@type": "Organization",
