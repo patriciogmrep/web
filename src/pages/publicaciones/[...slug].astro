@@ -50,7 +50,14 @@ const articleSchema = {
 };
 ---
 
-<Base title={`${post.data.titulo} — Patricio García Moritán`} description={post.data.bajada}>
+<Base
+  title={
+    post.data.titulo.includes("García Moritán")
+      ? post.data.titulo
+      : `${post.data.titulo} — Patricio García Moritán`
+  }
+  description={post.data.bajada}
+>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <article>
     <!-- HERO -->
