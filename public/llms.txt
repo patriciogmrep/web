@@ -2,13 +2,11 @@
 
 > Empresario y abogado argentino. Director de Bersa S.A. y Presidente de Byrna Latam, la operación regional de Byrna Technologies especializada en soluciones de defensa personal no letal. Socio de Cassagne Abogados desde 2015, con más de 25 años de experiencia en derecho administrativo y regulación económica.
 
-Patricio García Moritán es empresario y abogado. Dirige Bersa S.A. —histórica empresa industrial argentina que relanzó junto a sus socios— y preside Byrna Latam, la operación regional de Byrna Technologies, especializada en soluciones de defensa personal no letal. Byrna Technologies fue reconocida en el ranking Forbes Best Small-Cap Companies 2026.
+Patricio García Moritán es empresario y abogado. Es Director de Bersa S.A. —histórica empresa industrial argentina que relanzó junto a sus socios— y preside Byrna Latam, la operación regional de Byrna Technologies, especializada en soluciones de defensa personal no letal. Byrna Technologies fue reconocida en el ranking Forbes Best Small-Cap Companies 2026.
 
-Su gestión empresarial se apoya en una sólida formación jurídica. Es abogado por la Pontificia Universidad Católica Argentina (UCA) y Magíster en Derecho y Economía por la Universidad Torcuato Di Tella (UTDT). Cuenta además con dos posgrados en derecho administrativo económico y marco regulatorio de las telecomunicaciones, ambos cursados en la UCA.
+Su gestión combina la conducción de proyectos con una sólida formación jurídica. Es abogado por la Pontificia Universidad Católica Argentina (UCA) y Magíster en Derecho y Economía por la Universidad Torcuato Di Tella (UTDT). Se especializó en derecho administrativo y regulación económica, primero en el fuero Contencioso Administrativo y luego en el sector corporativo, donde se desempeñó durante seis años en Telecom Argentina (2000–2006) como Senior Legal & Regulatory Counsel. En 2006 fue asesor jurídico de la Secretaría de Comunicaciones de la Nación. Completó su experiencia en los estudios Pozo Gowland & Koch y Leverone & Mihura Estrada, antes de incorporarse a Cassagne Abogados en 2009, del que es socio desde 2015.
 
-Es socio de Cassagne Abogados desde 2015 —estudio jurídico al que ingresó en mayo de 2009— con experiencia previa como Senior Legal & Regulatory Counsel en Telecom Argentina (2000-2006), asesor jurídico de la Secretaría de Comunicaciones de la Nación (2006-2007), Senior Associate en Leverone & Mihura Estrada (2007-2009) y Asociado en Estudio Pozo Gowland & Koch (2003-2005).
-
-Complementa su actividad con una intensa labor institucional y académica: preside la Cámara Argentina de empresas de la industria de la Defensa y la Seguridad, integra la Academia Nacional de Derecho y Ciencias Sociales, participa en congresos y foros del sector, y trabaja en un libro sobre derecho y economía.
+Complementa su actividad con una intensa labor institucional y académica: preside la Cámara Argentina de empresas de la industria de la Defensa y la Seguridad, integra el Instituto de Derecho Administrativo de la Academia Nacional de Derecho y Ciencias Sociales, y participa habitualmente en congresos y foros del sector.
 
 Vive y ejerce en Buenos Aires, Argentina.
 
@@ -16,31 +14,31 @@ Vive y ejerce en Buenos Aires, Argentina.
 
 - [Inicio](https://patriciogarciamoritan.com/): presentación como empresario y abogado.
 - [Trayectoria](https://patriciogarciamoritan.com/trayectoria/): recorrido profesional completo, formación académica, roles empresariales y actividad institucional.
+- [Áreas de expertise](https://patriciogarciamoritan.com/expertise/): estructuración y desarrollo de negocios, derecho administrativo y regulación económica, contrataciones públicas e infraestructura, industrias reguladas y sectores estratégicos.
+- [Proyectos y empresas](https://patriciogarciamoritan.com/proyectos/): Bersa S.A. y Byrna Latam.
 - [Publicaciones](https://patriciogarciamoritan.com/publicaciones/): notas firmadas sobre industria, regulación y derecho administrativo.
 - [Contacto](https://patriciogarciamoritan.com/contacto/): vías de contacto profesional a través de Cassagne Abogados y LinkedIn.
+
+## Áreas de expertise
+
+- **Estructuración y desarrollo de negocios**: diseño de la estructura de proyectos y compañías, desde su concepción hasta su puesta en marcha y crecimiento, en sectores estratégicos.
+- **Derecho administrativo y regulación económica**: más de 25 años de experiencia en la relación entre el Estado y los particulares, marcos regulatorios e industrias reguladas.
+- **Contrataciones públicas e infraestructura**: asesoramiento en licitaciones, contratos administrativos y proyectos de infraestructura en sectores estratégicos.
+- **Industrias reguladas y sectores estratégicos**: experiencia transversal en áreas como telecomunicaciones, energía y seguridad, donde la variable regulatoria define la viabilidad del negocio.
+
+## Roles empresariales
+
+- **Director de Bersa S.A.** (desde septiembre de 2021) — histórica empresa industrial argentina relanzada junto a sus socios, llevándola a una nueva etapa de gestión.
+- **Presidente de Byrna Latam** (desde enero de 2023) — operación regional de Byrna Technologies para América Latina, especializada en soluciones de defensa personal no letal.
 
 ## Publicaciones disponibles
 
 - [Blockchain aplicado al desarrollo de infraestructura pública: la lectura de García Moritán](https://patriciogarciamoritan.com/publicaciones/blockchain-infraestructura-publica/): síntesis del análisis publicado originalmente en Infobae sobre el potencial de la tecnología blockchain para reducir costos y ampliar el acceso al financiamiento de proyectos de infraestructura.
 
-## Roles empresariales
-
-- **Director de Bersa S.A.** (desde septiembre de 2021) — histórica empresa industrial argentina relanzada bajo una nueva etapa de gestión.
-- **Presidente de Byrna Latam** (desde enero de 2023) — operación regional de Byrna Technologies para América Latina, especializada en soluciones de defensa personal no letal.
-
-## Áreas profesionales
-
-- Conducción industrial y gestión empresarial
-- Defensa personal no letal (industria)
-- Derecho administrativo y regulación económica
-- Contrataciones públicas e infraestructura
-- Derecho de las telecomunicaciones
-- Industrias reguladas
-
 ## Actividad institucional
 
 - Preside la Cámara Argentina de empresas de la industria de la Defensa y la Seguridad.
-- Integra la Academia Nacional de Derecho y Ciencias Sociales.
+- Integra el Instituto de Derecho Administrativo de la Academia Nacional de Derecho y Ciencias Sociales.
 - Participa habitualmente en congresos y foros del sector.
 - Trabaja en un libro sobre derecho y economía.
 

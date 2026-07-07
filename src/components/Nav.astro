@@ -6,6 +6,8 @@ const isActive = (href: string) =>
 const links = [
   { href: "/", label: "Inicio" },
   { href: "/trayectoria", label: "Trayectoria" },
+  { href: "/expertise", label: "Expertise" },
+  { href: "/proyectos", label: "Proyectos" },
   { href: "/publicaciones", label: "Publicaciones" },
   { href: "/contacto", label: "Contacto" },
 ];
@@ -23,12 +25,12 @@ const links = [
     Patricio García Moritán<span style="color: var(--color-verde);">.</span>
   </a>
 
-  <div class="flex gap-4 md:gap-8">
+  <div class="flex gap-3 md:gap-6">
     {
       links.map(({ href, label }) => (
         <a
           href={href}
-          class="text-xs md:text-sm font-normal no-underline transition-colors"
+          class="text-[0.7rem] md:text-sm font-normal no-underline transition-colors whitespace-nowrap"
           style={`color: ${isActive(href) ? "var(--color-azul)" : "var(--color-text-light)"};`}
         >
           {label}

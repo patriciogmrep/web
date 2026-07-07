@@ -1,0 +1,70 @@
+---
+import Base from "../layouts/Base.astro";
+
+const proyectos = [
+  {
+    titulo: "Bersa",
+    rol: "Director",
+    descripcion:
+      "Histórica empresa industrial argentina cuyo relanzamiento Patricio García Moritán impulsó y promovió junto a sus socios, llevándola a una nueva etapa de gestión.",
+  },
+  {
+    titulo: "Byrna Latam",
+    rol: "Presidente",
+    descripcion:
+      "Operación regional de Byrna Technologies, dedicada a soluciones de defensa personal no letal. Bajo su presidencia, estructura y desarrolla la expansión de estas tecnologías en América Latina. Byrna fue reconocida en el ranking Forbes Best Small-Cap Companies 2026.",
+  },
+];
+---
+
+<Base
+  title="Proyectos y empresas — Patricio García Moritán"
+  description="Proyectos empresariales que conduce Patricio García Moritán: Bersa S.A. y Byrna Latam, operación regional de Byrna Technologies."
+>
+  <section class="pt-24 pb-12 px-6" style="background: var(--color-azul);">
+    <div class="max-w-3xl mx-auto">
+      <p
+        class="text-xs uppercase tracking-[0.15em] font-medium mb-5"
+        style="color: var(--color-verde);"
+      >
+        Proyectos
+      </p>
+      <h1
+        class="font-serif font-normal text-white leading-[1.3]"
+        style="font-size: clamp(1.8rem, 4vw, 2.6rem);"
+      >
+        Proyectos y empresas
+      </h1>
+    </div>
+  </section>
+
+  <section class="px-6 py-16 max-w-4xl mx-auto space-y-8">
+    {
+      proyectos.map((p) => (
+        <article
+          class="p-8 md:p-10 rounded-xl"
+          style="background: white; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 4px 20px rgba(0,0,0,0.04);"
+        >
+          <p
+            class="text-[0.7rem] uppercase tracking-[0.12em] mb-3"
+            style="color: var(--color-verde);"
+          >
+            {p.rol}
+          </p>
+          <h2
+            class="font-serif text-2xl md:text-3xl font-normal mb-5"
+            style="color: var(--color-azul);"
+          >
+            {p.titulo}
+          </h2>
+          <p
+            class="font-serif text-base md:text-lg leading-relaxed"
+            style="color: var(--color-text);"
+          >
+            {p.descripcion}
+          </p>
+        </article>
+      ))
+    }
+  </section>
+</Base>
