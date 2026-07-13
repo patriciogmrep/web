@@ -5,7 +5,46 @@ import { getCollection } from "astro:content";
 const publicaciones = (await getCollection("publicaciones", ({ data }) => !data.draft))
   .sort((a, b) => b.data.fecha.valueOf() - a.data.fecha.valueOf())
   .slice(0, 3);
+
+const faqs = [
+  {
+    q: "¿Quién es Patricio García Moritán?",
+    a: "Patricio García Moritán es un empresario y abogado argentino. Es Director de Bersa S.A. y Presidente de Byrna Latam, la operación regional de Byrna Technologies especializada en soluciones de defensa personal no letal. Es socio de Cassagne Abogados desde 2015.",
+  },
+  {
+    q: "¿A qué se dedica Patricio García Moritán?",
+    a: "Combina la conducción de proyectos empresariales con el ejercicio del derecho administrativo y la regulación económica. Preside Byrna Latam, dirige Bersa S.A. y es socio de Cassagne Abogados, con más de 25 años de experiencia en industrias reguladas.",
+  },
+  {
+    q: "¿Qué empresas dirige o preside Patricio García Moritán?",
+    a: "Es Director de Bersa S.A. desde septiembre de 2021 —histórica empresa industrial argentina relanzada junto a sus socios— y Presidente de Byrna Latam desde enero de 2023 —la operación regional de Byrna Technologies para América Latina, reconocida en el ranking Forbes Best Small-Cap Companies 2026—.",
+  },
+  {
+    q: "¿En qué se especializa profesionalmente?",
+    a: "En derecho administrativo, regulación económica, contrataciones públicas e industrias reguladas. Cuenta con más de 25 años de experiencia en la relación entre el Estado y los particulares, marcos regulatorios y sectores estratégicos.",
+  },
+  {
+    q: "¿Dónde estudió Patricio García Moritán?",
+    a: "Es abogado por la Pontificia Universidad Católica Argentina (UCA) y Magíster en Derecho y Economía por la Universidad Torcuato Di Tella (UTDT). Cuenta además con posgrados en derecho administrativo económico y marco regulatorio de las telecomunicaciones.",
+  },
+  {
+    q: "¿Qué idiomas habla?",
+    a: "Habla español (nativo), inglés y francés, estos dos últimos con nivel profesional pleno.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
 ---
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 <Base title="Empresario y abogado — Patricio García Moritán">
   <!-- HERO -->
@@ -100,6 +139,43 @@ const publicaciones = (await getCollection("publicaciones", ({ data }) => !data.
         administrativo y regulación económica, y socio de <strong>Cassagne
         Abogados</strong>.
       </p>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES -->
+  <section class="px-6 pb-20 max-w-3xl mx-auto">
+    <p
+      class="text-xs uppercase tracking-[0.15em] font-medium mb-3"
+      style="color: var(--color-verde);"
+    >
+      Preguntas frecuentes
+    </p>
+    <h2
+      class="font-serif text-2xl md:text-3xl font-normal mb-10"
+      style="color: var(--color-azul);"
+    >
+      Sobre Patricio García Moritán
+    </h2>
+
+    <div class="space-y-8">
+      {
+        faqs.map((f) => (
+          <div>
+            <h3
+              class="font-sans font-semibold text-base md:text-lg mb-2"
+              style="color: var(--color-azul);"
+            >
+              {f.q}
+            </h3>
+            <p
+              class="font-serif text-base leading-relaxed"
+              style="color: var(--color-text);"
+            >
+              {f.a}
+            </p>
+          </div>
+        ))
+      }
     </div>
   </section>
 
