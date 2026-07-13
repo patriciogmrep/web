@@ -93,6 +93,11 @@ const isHome = Astro.url.pathname === "/";
         description:
           "Empresario y abogado argentino. Director de Bersa S.A. y Presidente de Byrna Latam, la operación regional de Byrna Technologies especializada en soluciones de defensa personal no letal. Socio de Cassagne Abogados desde 2015, con más de 25 años de experiencia en derecho administrativo y regulación económica.",
         jobTitle: "Empresario y abogado — Presidente de Byrna Latam, Director de Bersa S.A., Socio en Cassagne Abogados",
+        identifier: {
+          "@type": "PropertyValue",
+          propertyID: "Wikidata",
+          value: "Q140536138",
+        },
         nationality: {
           "@type": "Country",
           name: "Argentina",
@@ -148,9 +153,16 @@ const isHome = Astro.url.pathname === "/";
         worksFor: [
           {
             "@type": "Organization",
+            "@id": "https://www.wikidata.org/wiki/Q140541863",
             name: "Byrna Latam",
             description:
               "Operación regional de Byrna Technologies para América Latina — soluciones de defensa personal no letal.",
+            parentOrganization: {
+              "@type": "Corporation",
+              name: "Byrna Technologies",
+              url: "https://byrna.com/",
+              sameAs: "https://www.wikidata.org/wiki/Q140541863",
+            },
             address: {
               "@type": "PostalAddress",
               addressLocality: "Buenos Aires",
@@ -159,9 +171,12 @@ const isHome = Astro.url.pathname === "/";
           },
           {
             "@type": "Organization",
+            "@id": "https://www.wikidata.org/wiki/Q140541920",
             name: "Bersa S.A.",
+            url: "https://bersa.com.ar/",
             description:
               "Histórica empresa industrial argentina relanzada bajo una nueva etapa de gestión.",
+            sameAs: "https://www.wikidata.org/wiki/Q140541920",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Buenos Aires",
@@ -170,9 +185,10 @@ const isHome = Astro.url.pathname === "/";
           },
           {
             "@type": "LegalService",
-            "@id": "https://www.cassagne.com.ar/#organization",
+            "@id": "https://www.wikidata.org/wiki/Q140541164",
             name: "Cassagne Abogados",
             url: "https://www.cassagne.com.ar",
+            sameAs: "https://www.wikidata.org/wiki/Q140541164",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Buenos Aires",
