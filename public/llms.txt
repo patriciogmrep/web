@@ -33,6 +33,7 @@ Vive y ejerce en Buenos Aires, Argentina.
 
 ## Publicaciones disponibles
 
+- [Los desafíos regulatorios de las telecomunicaciones: la lectura de García Moritán](https://patriciogarciamoritan.com/publicaciones/desafios-regulatorios-telecomunicaciones/): síntesis del análisis publicado originalmente en El Cronista sobre los vacíos del marco regulatorio argentino de telecomunicaciones y las siete tendencias globales del sector que el autor anticipó.
 - [Blockchain aplicado al desarrollo de infraestructura pública: la lectura de García Moritán](https://patriciogarciamoritan.com/publicaciones/blockchain-infraestructura-publica/): síntesis del análisis publicado originalmente en Infobae sobre el potencial de la tecnología blockchain para reducir costos y ampliar el acceso al financiamiento de proyectos de infraestructura.
 
 ## Actividad institucional
