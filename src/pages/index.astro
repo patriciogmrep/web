@@ -2,7 +2,9 @@
 import Base from "../layouts/Base.astro";
 import { getCollection } from "astro:content";
 
-const publicaciones = (await getCollection("publicaciones", ({ data }) => !data.draft))
+const publicaciones = (
+  await getCollection("publicaciones", ({ data }) => !data.draft && !data.oculto)
+)
   .sort((a, b) => b.data.fecha.valueOf() - a.data.fecha.valueOf())
   .slice(0, 3);
 ---

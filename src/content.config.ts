@@ -10,6 +10,10 @@ const publicaciones = defineCollection({
     fecha: z.coerce.date(),
     lectura: z.string().default("5 min"),
     draft: z.boolean().default(false),
+    // Sigue indexable por buscadores, pero no aparece en listados visibles
+    // del sitio (home cards, /publicaciones). Útil para review con Patricio
+    // antes de destacarla públicamente.
+    oculto: z.boolean().default(false),
     // Para notas reproducidas de medios externos
     medio: z.string().optional(),
     medioUrl: z.string().url().optional(),
